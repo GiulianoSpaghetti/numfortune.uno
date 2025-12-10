@@ -1,5 +1,5 @@
 ## numerone's fortune uno
-numrone's fortune rewritten in fraeowrk uno.
+numrone's fortune rewritten in framework uno.
 
 It's a simple fortune teller based on helloacm.com for having sentences.
 
