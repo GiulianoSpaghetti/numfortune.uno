@@ -1,6 +1,7 @@
 # numerone's fortune uno
 
 Un fortune teller per android e windows grafico in uno platform.
+SI basa su helloacm.com per avre gli aforismi.
 
 ## Come installare
 
