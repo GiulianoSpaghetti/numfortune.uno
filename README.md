@@ -1,3 +1,5 @@
+[![.NET Uno Build](https://github.com/GiulianoSpaghetti/numfortune.uno/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/GiulianoSpaghetti/numfortune.uno/actions/workflows/dotnet-desktop.yml)
+
 # numerone's fortune uno
 
 Un fortune teller per android e windows grafico in uno platform.
@@ -9,16 +11,45 @@ SI basa su helloacm.com per avre gli aforismi.
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.numfortune.uno)
 
-## Per windows e debian
+## Per Unix
 
 [![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2315312)
 
-Prerequisiti: 
+## Per Windows
 
-https://winstall.app/apps/Microsoft.DotNet.DesktopRuntime.10
+Scegiere la versione che più piace dalle releases su questo sito web.
 
-Oppure 9 o o 8 a seconda di quello che scegliete.
-E' consigliabile avere l'appruntime 1.8 installato sul computer (https://winstall.app/apps/Microsoft.WindowsAppRuntime.1.8), anche se si utilizza il desktop runtime 9 o 10.
+## Prerequisti
+
+### Windows
+
+    unigetui://DesktopRuntime
+    
+installare il windows desktopruntime 10
+
+### Unix
+
+https://learn.microsoft.com/it-it/linux/packages
+
+Bisogna installare libice6 e libsm6 e bisogna precaricare freetype per farlo funzionare.
+
+E' stato dimostrato che il software è perfettamente bilanciato, perché il binario viene ottimizzato dal dotnet.
+
+Sapendo che il binario è per amd64, è possibile avviarlo con dotnet /usr/game/il_fortune_di_numerone/ilfortunedinumeronematerial.Desktop.dll sui sistemi arm64.
+
+## Installazione col repository (GNU/Linux)
+Per prima seguire la guida su https://learn.microsoft.com/it-it/dotnet/core/install/linux-debian
+
+Poi seguire la guida su http://numeronesoft.ddns.net:8080
+
+e poi update e instal numfortuneuno
+
+Prerequisites:
+
+https://learn.microsoft.com/en-us/linux/packages
+
+Note: i pacchetti sono in IL, quindi in teoria basta reinstallare il software ad ogni update del dotnet e quindi avviare una volta il programma per ottenere il binario aggiornato.
+Ovviamente se aggiornano avalonia bisogna ricompilare. runtime 9 o 10.
 
 ## Aggiornamenti
 
