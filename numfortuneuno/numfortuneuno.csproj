@@ -4,7 +4,7 @@
 
     <OutputType>Exe</OutputType>
     <UnoSingleProject>true</UnoSingleProject>
-
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <!-- Display name -->
     <ApplicationTitle>numfortuneuno</ApplicationTitle>
     <!-- App Identifier -->
