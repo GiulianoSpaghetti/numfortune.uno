@@ -35,7 +35,7 @@ Bisogna installare libice6 e libsm6 e bisogna precaricare freetype per farlo fun
 
 E' stato dimostrato che il software è perfettamente bilanciato, perché il binario viene ottimizzato dal dotnet.
 
-Sapendo che il binario è per amd64, è possibile avviarlo con dotnet /usr/game/il_fortune_di_numerone/ilfortunedinumeronematerial.Desktop.dll sui sistemi arm64.
+Sapendo che il binario è per amd64, è possibile avviarlo con dotnet /usr/game/numfortuneuno/numfortuneuno.dll sui sistemi arm64.
 
 ## Installazione col repository (GNU/Linux)
 Per prima seguire la guida su https://learn.microsoft.com/it-it/dotnet/core/install/linux-debian
