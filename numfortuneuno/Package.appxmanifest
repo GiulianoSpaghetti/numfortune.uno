@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity  Name="numerone-s-fortune-uno" Publisher="CN=Giulio Sorrentino, O=numeronesoft, C=IT" Version="1.0.14.0"/>
+  <Properties >
+  
+  <Logo>Assets/Icons/PackageLogo.png</Logo>
+  
+  <PublisherDisplayName>Giulio Sorrentino</PublisherDisplayName>
+  
+  <DisplayName>numerone s fortune uno</DisplayName>
+  </Properties >
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements  DisplayName="numerone s fortune uno" Description="a fortune teller in uno framework" Square150x150Logo="Assets/Icons/MediumTile.png" Square44x44Logo="Assets/Icons/AppIcon.png">
+        <uap:DefaultTile Square71x71Logo="Assets/Icons/SmallTile.png" Wide310x150Logo="Assets/Icons/WideTile.png" Square310x310Logo="Assets/Icons/LargeTile.png"/>
+        <uap:SplashScreen Image="Assets/Splash/SplashScreen.png"/>
+      </uap:VisualElements >
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,28 @@
+﻿<Page x:Class="numfortuneuno.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:numfortuneuno.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:um="using:Uno.Material"
+      NavigationCacheMode="Required"
+      Background="{ThemeResource BackgroundBrush}">
+  <ScrollViewer IsTabStop="True">
+    <Grid utu:SafeArea.Insets="VisibleBounds">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <utu:NavigationBar Content="{Binding Title}" />
+
+            <StackPanel Grid.Row="1">
+                <TextBox Text="{Binding Cookie}" TextWrapping="Wrap" AcceptsReturn="true" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="false"/>
+                <Button Content="Get new Cookie" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding Click}"/>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >You can try saying into microphone 'Share the cookie with my partner' or 'Read another cookie' or 'Share the cookie on the semantic internet of...' and the name of the road you are.</TextBlock>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >© Giulio Sorrentino 2025 all right reserved</TextBlock>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >A simple fortune teller, rewritten with Microsoft's MVVM pattern and UNO Toolkit</TextBlock>
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >This app is MIT. If you paid you are be scammed.</TextBlock>
+            </StackPanel>
+        </Grid>
+  </ScrollViewer>
+</Page>
