@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
@@ -47,7 +47,7 @@ jobs:
       shell: pwsh
 
     - name: Upload MSIX artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: MSIX
         path: numfortuneuno\bin\Release\net10.0-windows10.0.26100.0\AppPackages
