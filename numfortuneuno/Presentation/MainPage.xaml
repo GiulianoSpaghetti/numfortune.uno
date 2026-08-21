@@ -23,6 +23,20 @@
                 <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >A simple fortune teller, rewritten with Microsoft's MVVM pattern and UNO Toolkit</TextBlock>
                 <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" >This app is MIT. If you paid you are be scammed.</TextBlock>
             </StackPanel>
+            <InfoBar x:Name="Snackbar"
+             Title="Notification"
+             Message="{Binding Error}"
+             Severity="Error"
+             IsOpen="False"
+             VerticalAlignment="Bottom"
+             HorizontalAlignment="Center"
+             Margin="0,0,0,24"
+             CornerRadius="8"
+             IsClosable="True">
+                <InfoBar.ActionButton>
+                <Button Content="Dimiss" Click="Dimiss_Click"/>
+            </InfoBar.ActionButton>
+        </InfoBar>
         </Grid>
-  </ScrollViewer>
+    </ScrollViewer>
 </Page>

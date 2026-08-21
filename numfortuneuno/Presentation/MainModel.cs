@@ -29,11 +29,12 @@ public partial class MainModel : ObservableObject
         }
         catch (Exception ex)
         {
-            Cookie = ex.Message;
+            Error = ex.Message;
             MainPage.Current?.DispatcherQueue?.TryEnqueue(() =>
             {
-                OnPropertyChanged(nameof(Cookie));
+                OnPropertyChanged(nameof(Error));
             });
+            MainPage.Current.ShowSnackbar();
             return;
         }
 
@@ -49,7 +50,12 @@ public partial class MainModel : ObservableObject
         }
         else
         {
-            Cookie = $"The HTTP status code is ${httpResponse.StatusCode}";
+            Error = $"The HTTP status code is ${httpResponse.StatusCode}";
+            MainPage.Current?.DispatcherQueue?.TryEnqueue(() =>
+            {
+                OnPropertyChanged(nameof(Error));
+            });
+            MainPage.Current.ShowSnackbar();
         }
         MainPage.Current?.DispatcherQueue?.TryEnqueue(() =>
         {
@@ -59,6 +65,7 @@ public partial class MainModel : ObservableObject
     }
     public string? Title { get; }
     public string? Cookie { get; private set; }
+    public string? Error { get; private set; }
     private HttpResponseMessage httpResponse;
     private HttpClient client;
 }
